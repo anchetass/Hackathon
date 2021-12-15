@@ -1,10 +1,15 @@
 package UserManagement
 
 class Staff (
-    employeeId: String,
-    firstName: String,
-    lastName: String,
-    isAdmin: Boolean
-): User (employeeId, firstName, lastName) {
+    override var firstName: String,
+    override var lastName: String,
+    override var isAdmin: Boolean,
+    var username: String,
+    var password: String
+): User (firstName, lastName, isAdmin) {
+    override var employeeId: String = ""
 
+    init {
+        this.employeeId = "${firstName.substring(0,2).uppercase()}-${lastName.substring(0,2).uppercase()}-${(10000000 until 99999999).random()}"
+    }
 }
