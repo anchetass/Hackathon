@@ -2,5 +2,8 @@ package ItemManagement
 
 class ItemList (){
 
-    var itemList = mutableListOf<Item>()
+    companion object {
+        var itemList = mutableListOf<Item>()
+        const val buffer = 20
+    }
 }
