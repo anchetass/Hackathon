@@ -1,12 +1,14 @@
 package ItemManagement
 
-class ItemList (){
-
-    companion object {
-        var items = mutableListOf<Item>()
-        const val buffer = 20
-    }
+class ItemList () {
     init {
+
+    }
+    companion object {
+        const val buffer = 10
+        var items = mutableListOf<Item>()
+    }
+    fun generateItems () {
         items.add( Item("001A","TenderJuicy Hotdog", 20, ItemCategory.FROZEN))
         items.add( Item("001B","Pampanga's Best Tocino", 20, ItemCategory.FROZEN ))
         items.add( Item("001C","Purefoods Nuggers", 20, ItemCategory.FROZEN ))
@@ -23,4 +25,13 @@ class ItemList (){
         items.add( Item("005B","Tide ", 20, ItemCategory.CLEANING ))
         items.add( Item("005C","Zonrox", 20, ItemCategory.CLEANING ))
     }
+
+    fun frozenGoodList (): List<Item> {
+        return items.filter { it.category == ItemCategory.FROZEN }
+    }
+    fun dairyList (): List<Item> {
+        return items.filter { it.category == ItemCategory.DAIRY }
+    }
+
+
 }

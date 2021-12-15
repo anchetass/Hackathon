@@ -1,6 +1,9 @@
+import ItemManagement.ItemList
+import ItemManagement.ItemManagement
+
 fun main(args: Array<String>) {
-    println("hackathon")
-    println("hackathon")
-    println("hackathon")
-    println("hackathon pa more")
+    ItemList().generateItems()
+    ItemManagement().displayFrozenGoods()
+    ItemManagement().consumeItem("BearBrand", 5)
+    ItemManagement().displayDairy()
 }
