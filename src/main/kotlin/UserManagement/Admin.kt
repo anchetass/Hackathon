@@ -17,6 +17,23 @@ class Admin(
         staffList.add(newEmployee)
     }
 
+    fun removeUser(userId: String): Boolean{
+        for(user in adminList){
+            if(user.employeeId == userId){
+                adminList.remove(user)
+                return true
+            }
+        }
+
+        for(user in staffList){
+            if(user.employeeId == userId){
+                staffList.remove(user)
+                return true
+            }
+        }
+        return false
+    }
+
     init {
         this.employeeId = "${firstName.substring(0,2).uppercase()}-${lastName.substring(0,2).uppercase()}-${(10000000 until 99999999).random()}"
     }

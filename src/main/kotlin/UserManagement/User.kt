@@ -1,5 +1,7 @@
 package UserManagement
 
+import adminUI
+
 abstract class User(
     firstName: String,
     lastName: String,
@@ -48,8 +50,5 @@ abstract class User(
                 }
             }
         }
-
-
     }
-
 }
