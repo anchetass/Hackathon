@@ -1,7 +1,5 @@
 package ItemManagement
 
-import UserManagement.User
-
 /**
  * This class shows the attributes of Items as well as
  * the methods that is related to the "items" class

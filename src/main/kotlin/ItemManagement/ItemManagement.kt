@@ -1,7 +1,5 @@
 package ItemManagement
 
-import UserManagement.User
-
 class ItemManagement {
 
     // This method gets the item from the item list by its name using a string parameter
