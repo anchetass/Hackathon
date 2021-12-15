@@ -35,6 +35,6 @@ class Admin(
     }
 
     init {
-        this.employeeId = "${firstName.substring(0,2).uppercase()}-${lastName.substring(0,2).uppercase()}-${(10000000 until 99999999).random()}"
+        this.employeeId = "ADM-${firstName.substring(0,2).uppercase()}-${lastName.substring(0,2).uppercase()}-${(adminList.size.plus(1))}"
     }
 }

@@ -10,6 +10,8 @@ class Staff (
     override var employeeId: String = ""
 
     init {
-        this.employeeId = "${firstName.substring(0,2).uppercase()}-${lastName.substring(0,2).uppercase()}-${(10000000 until 99999999).random()}"
+        this.employeeId = "STF-${firstName.substring(0, 2).uppercase()}-${
+            lastName.substring(0, 2).uppercase()
+        }-${(adminList.size.plus(1))}"
     }
 }
