@@ -16,7 +16,7 @@ class Item (
 
     // This method gets the item from the item list by its name using a string parameter
     private fun getItem(name: String): Item {
-        return ItemList().itemList.find { it.itemName == name }!!
+        return ItemList().itemList.find { it.itemName.lowercase() == name.lowercase() }!!
     }
 
     //Method that would add specific number of stocks to a specific item
