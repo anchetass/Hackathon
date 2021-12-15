@@ -8,11 +8,13 @@ import UserManagement.User
  */
 
 class Item (
-    override val itemID: String,
     override val itemName: String,
     override var stocks: Int,
     override val category: ItemCategory
     ): ItemsInterface {
+    override var itemID: String = ""
 
-
+    init {
+        this.itemID = "ITM-${(ItemList.items.size.plus(1))}"
+    }
 }

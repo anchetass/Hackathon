@@ -32,14 +32,23 @@ class ItemManagement {
         }
     }
     //Method that would add specific item to the item list
-    fun registerItem (itemName: String, user: User) {
-        val item = getItem(itemName)
+    fun registerItem (itemName: String, category: String, stock: Int, user: User) {
+        val cat = when (category.lowercase()) {
+            "frozen goods" -> ItemCategory.FROZEN
+            "canned" -> ItemCategory.CANNED
+            "cleaning" -> ItemCategory.CLEANING
+            "dairy" -> ItemCategory.DAIRY
+            "alcohol" -> ItemCategory.ALCOHOL
+            else -> {
+                throw IllegalArgumentException("Invalid Category")
+            }
+        }
+        val item = Item(itemName, stock, cat)
         if (user.isAdmin) {
             ItemList.items.add(item)
             println("${item.itemName} is added to the inventory monitoring")
-        }
-        else {
-            throw IllegalAccessException ("You don't have the permission to do this")
+        } else {
+            throw IllegalAccessException("You don't have the permission to do this")
         }
     }
     //Method that would remove specific item to the item list
