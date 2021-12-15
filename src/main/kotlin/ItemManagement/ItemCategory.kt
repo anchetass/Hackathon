@@ -1,5 +1,9 @@
 package ItemManagement
 
+/**
+ *  This class shows the available categories of all the items.
+ */
+
 enum class ItemCategory (shortName: String, longName: String) {
 
     FROZEN ("FG","Frozen Goods"),

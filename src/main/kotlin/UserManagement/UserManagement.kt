@@ -2,6 +2,7 @@ package UserManagement
 
 import adminUI
 
+// This method is for the users to login their account.
 fun login(username: String, password: String): String{
     for(user in User.adminList){
         if(user.username == username && user.password == password) return "admin"
@@ -12,6 +13,7 @@ fun login(username: String, password: String): String{
     return "404"
 }
 
+// This method is for the registration of a new user.
 fun promptUserRegistration(admin: Admin){
     var passwordSuccess = false
     print("First Name: ")
@@ -58,6 +60,7 @@ fun promptUserRegistration(admin: Admin){
     adminUI(admin)
 }
 
+// This method is for the deletion of user.
 fun promptRemoveUser(admin: Admin){
     var checkId = false
     while (!checkId) {

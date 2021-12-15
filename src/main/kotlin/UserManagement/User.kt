@@ -1,5 +1,11 @@
 package UserManagement
 
+
+/**
+ *  Abstract class for all the user levels
+ *  (Admin or Staff)
+ */
+
 abstract class User(
     firstName: String,
     lastName: String,

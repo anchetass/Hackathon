@@ -1,5 +1,10 @@
 package UserManagement
 
+/**
+ * This class shows the attributes of Admin as well as
+ * the functions that is related to the "admin" class
+ */
+
 class Admin(
     override var firstName: String,
     override var lastName: String,
