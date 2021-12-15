@@ -32,6 +32,14 @@ class ItemList () {
     fun dairyList (): List<Item> {
         return items.filter { it.category == ItemCategory.DAIRY }
     }
-
+    fun cannedList (): List<Item> {
+        return items.filter { it.category == ItemCategory.CANNED }
+    }
+    fun alcoholList (): List<Item> {
+        return items.filter { it.category == ItemCategory.ALCOHOL }
+    }
+    fun cleaningList (): List<Item> {
+        return items.filter { it.category == ItemCategory.CLEANING }
+    }
 
 }

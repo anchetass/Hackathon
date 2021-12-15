@@ -67,5 +67,25 @@ class ItemManagement {
         }
         println(dairy)
     }
-
+    fun displayCanned () {
+        val canned = mutableMapOf<String, Int>()
+        ItemList().cannedList().forEach {
+            canned[it.itemName] = it.stocks
+        }
+        println(canned)
+    }
+    fun displayAlcohol () {
+        val alcohol = mutableMapOf<String, Int>()
+        ItemList().alcoholList().forEach {
+            alcohol[it.itemName] = it.stocks
+        }
+        println(alcohol)
+    }
+    fun displayCleaning () {
+        val cleaning = mutableMapOf<String, Int>()
+        ItemList().cleaningList().forEach {
+            cleaning[it.itemName] = it.stocks
+        }
+        println(cleaning)
+    }
 }
